@@ -3,171 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MARROW | Tactical Training for the Venture Core</title>
+    <title>The Leadership Sherpa | Social Muscle & Training</title>
     <style>
         :root {
-            --bg: #070707;
-            --surface: #111111;
-            --border: #222222;
-            --text: #e2e2e2;
-            --muted: #666666;
-            --accent: #ffffff;
-            --transition: 0.3s ease;
+            --primary-dark: #1a1c1e;
+            --accent-orange: #ff6b35; /* Safety/Climbing Orange */
+            --slate-gray: #eceef0;
+            --text-main: #333;
+            --white: #ffffff;
         }
 
         body {
-            background-color: var(--bg);
-            color: var(--text);
-            font-family: 'Inter', -apple-system, sans-serif;
-            margin: 0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.6;
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            background-color: var(--white);
         }
 
-        .container { max-width: 900px; margin: 0 auto; padding: 2rem; }
-
         header {
-            padding: 4rem 0;
+            background: var(--primary-dark);
+            color: var(--white);
+            padding: 2rem 10%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid var(--border);
-            margin-bottom: 4rem;
         }
 
-        .logo { font-weight: 300; letter-spacing: 0.6em; text-transform: uppercase; font-size: 1rem; }
-
-        .view-switch {
-            display: flex;
-            background: var(--surface);
-            padding: 4px;
-            border: 1px solid var(--border);
-            border-radius: 2px;
-        }
-
-        .view-btn {
-            padding: 8px 18px;
-            font-size: 0.7rem;
-            cursor: pointer;
-            border: none;
-            background: transparent;
-            color: var(--muted);
+        .logo {
+            font-weight: 800;
+            font-size: 1.5rem;
+            letter-spacing: -1px;
             text-transform: uppercase;
-            font-weight: 600;
         }
 
-        .view-btn.active { background: var(--bg); color: var(--accent); }
+        .hero {
+            padding: 100px 10%;
+            background: linear-gradient(rgba(26, 28, 30, 0.9), rgba(26, 28, 30, 0.9)), url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            color: white;
+            text-align: center;
+        }
 
-        .view-content { display: none; animation: fadeIn 0.4s ease; }
-        .view-content.active { display: block; }
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
 
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
 
-        h1 { font-size: 2.8rem; font-weight: 300; margin-bottom: 2rem; line-height: 1.1; color: var(--accent); }
-        h2 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--muted); margin: 4rem 0 1.5rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
-        
-        .entry-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-        .entry-card { background: var(--surface); padding: 1.5rem; border: 1px solid var(--border); }
-        .entry-card h3 { font-size: 0.85rem; margin-bottom: 1rem; color: var(--accent); text-transform: uppercase; }
-        .entry-card p { font-size: 0.8rem; color: var(--muted); line-height: 1.4; }
+        .btn {
+            background: var(--accent-orange);
+            color: white;
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            display: inline-block;
+            transition: transform 0.2s;
+        }
 
-        .pillar-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 3rem 0; }
-        .pillar h3 { font-size: 1.2rem; margin-bottom: 0.5rem; font-weight: 500; }
-        .pillar p { color: var(--muted); font-size: 0.95rem; }
+        .btn:hover {
+            transform: translateY(-2px);
+        }
 
-        .audit-box { border-left: 2px solid var(--border); padding-left: 2rem; margin: 4rem 0; }
+        section {
+            padding: 80px 10%;
+        }
 
-        footer { text-align: center; padding: 5rem 0; color: #222; font-size: 0.7rem; letter-spacing: 0.5em; text-transform: uppercase; }
+        .pillars {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            background: var(--slate-gray);
+        }
+
+        .pillar-card {
+            background: white;
+            padding: 2rem;
+            border-left: 5px solid var(--accent-orange);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .cro-section {
+            background: var(--primary-dark);
+            color: white;
+        }
+
+        .training-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 3rem;
+        }
+
+        .day-box {
+            border: 1px solid #444;
+            padding: 1.5rem;
+            border-radius: 4px;
+        }
+
+        .day-box h4 {
+            color: var(--accent-orange);
+            margin-top: 0;
+        }
+
+        footer {
+            padding: 40px 10%;
+            text-align: center;
+            font-size: 0.9rem;
+            background: #f9f9f9;
+        }
+
+        h2 { font-size: 2.5rem; margin-bottom: 2rem; }
+        h3 { color: var(--accent-orange); text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; }
+
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <header>
-            <div class="logo">MARROW</div>
-            <div class="view-switch">
-                <button class="view-btn active" onclick="switchView('team')">Management Core</button>
-                <button class="view-btn" onclick="switchView('partner')">Partners / PE / VC</button>
-            </div>
-        </header>
+<header>
+    <div class="logo">The Leadership Sherpa</div>
+</header>
 
-        <div id="team-view" class="view-content active">
-            <h1>Structural Resilience <br>for Radical Inflections.</h1>
-            <p style="font-size: 1.2rem; color: var(--muted); max-width: 650px;">Marrow provides tactical leadership training for the venture core. We drill the protocols that allow Founders and Operators to influence for a common purpose—when the edges are burning.</p>
+<section class="hero">
+    <h1>Leadership is a Muscle, Not a Title. [cite: 3]</h1>
+    <p>Most training is academic. We treat it like rock climbing[cite: 4, 5]. We move from 'knowing' to 'practicing' through the daily discipline of social fitness[cite: 7, 17].</p>
+    <a href="#training" class="btn">Start the 7-Day Ascent</a>
+</section>
 
-            <h2>Inflection Point Training</h2>
-            <div class="entry-grid">
-                <div class="entry-card">
-                    <h3>The Capital Shock</h3>
-                    <p>Post-raise. Training leaders to scale influence and maintain empathy as headcount and complexity explode.</p>
-                </div>
-                <div class="entry-card">
-                    <h3>The Acquisition Shift</h3>
-                    <p>Post-PE purchase. Bridging the gap between efficiency mandates and the team's core identity.</p>
-                </div>
-                <div class="entry-card">
-                    <h3>The Survival Pivot</h3>
-                    <p>Downsizing & Reskilling. Tactical protocols for leading the "staying team" through trauma with tenacity.</p>
-                </div>
-            </div>
-
-            <div class="pillar-grid">
-                <div class="pillar">
-                    <h3>Tactical Empathy</h3>
-                    <p>We train leaders to hear the truth behind the noise—ensuring the team feels seen so they can execute faster.</p>
-                </div>
-                <div class="pillar">
-                    <h3>Mechanical Tenacity</h3>
-                    <p>We provide first-principles frameworks to deconstruct chaos into manageable, physics-based problems.</p>
-                </div>
-            </div>
-            
-        </div>
-
-        <div id="partner-view" class="view-content">
-            <h1>Ensuring Execution Integrity.</h1>
-            <p style="font-size: 1.2rem; color: var(--muted); max-width: 650px;">We are the stealth training layer that secures your most critical assets. We fix the human core that traditional consultancies overlook.</p>
-
-            <h2>Portfolio Assurance</h2>
-            <div class="entry-grid">
-                <div class="entry-card">
-                    <h3>Founder Risk</h3>
-                    <p>Stabilizing the Founder-Operator interlock to prevent leadership fragmentation during rapid scaling.</p>
-                </div>
-                <div class="entry-card">
-                    <h3>Private Equity Efficiency</h3>
-                    <p>Training management teams to absorb transformation mandates without triggering organizational paralysis.</p>
-                </div>
-                <div class="entry-card">
-                    <h3>Labor Transformation</h3>
-                    <p>Managing the human variable during radical reskilling or downsizing to protect institutional knowledge.</p>
-                </div>
-            </div>
-
-            <div class="audit-box">
-                <h3>The Marrow Differentiator</h3>
-                <p style="color: var(--muted); font-size: 1rem;">We don't "develop" leaders; we <strong>train them</strong> for high-stakes maneuvers. Our protocols deliver 90%+ alignment between internal reality and board reporting within 30 days. Stealth by design. Outcome-led.</p>
-            </div>
-            
-        </div>
-
-        <footer>
-            MARROW Private Practice | Tactical Training | © 2026
-        </footer>
+<section class="pillars">
+    <div style="grid-column: 1 / -1;">
+        <h3>The Philosophy</h3>
+        <h2>The Core Pillars</h2>
+    </div>
+    
+    <div class="pillar-card">
+        <h4>Radical Clarity in Conflict [cite: 9]</h4>
+        <p>Navigate interpersonal challenges by debating until the best solution is found, then building the path forward together[cite: 10].</p>
     </div>
 
-    <script>
-        function switchView(view) {
-            document.querySelectorAll('.view-btn').forEach(btn => btn.classList.remove('active'));
-            document.querySelectorAll('.view-content').forEach(content => content.classList.remove('active'));
+    <div class="pillar-card">
+        <h4>Applied Training [cite: 11]</h4>
+        <p>No lectures—only tools for real-time clarity and decision-making in high-stakes, time-sensitive situations[cite: 12, 13].</p>
+    </div>
 
-            if(view === 'team') {
-                document.querySelector('button[onclick*="team"]').classList.add('active');
-                document.getElementById('team-view').classList.add('active');
-            } else {
-                document.querySelector('button[onclick*="partner"]').classList.add('active');
-                document.getElementById('partner-view').classList.add('active');
-            }
-        }
-    </script>
+    <div class="pillar-card">
+        <h4>Scalable Habit Formation [cite: 14]</h4>
+        <p>A "Duolingo" approach to leadership, ensuring growth is a daily discipline rather than a one-off seminar[cite: 15, 16].</p>
+    </div>
+</section>
+
+<section class="cro-section">
+    <h3>The Role</h3>
+    <h2>Become the Chief Repeating Officer [cite: 18]</h2>
+    <p>You aren't a broken record—you are a <strong>Metronome</strong>[cite: 19]. You provide the steady beat of strategy and accountability that keeps high-velocity chaos from turning into a crash[cite: 20, 21].</p>
+    <blockquote>Success isn't when you stop repeating yourself; success is when your team starts repeating you to each other[cite: 22, 23].</blockquote>
+</section>
+
+<section id="training">
+    <h3>The Program</h3>
+    <h2>7 Days of Alignment & Accountability Reps [cite: 24]</h2>
+    <p>The Goal: Ensure every team member knows the Map (Strategy), the Summit (Goal), and their Pack (Accountability)[cite: 25].</p>
+
+    <div class="training-grid">
+        <div class="day-box">
+            <h4>Day 1: The Strategic Echo [cite: 26]</h4>
+            <p>Link tactical tasks back to the Overall Company Strategy in every meeting[cite: 27].</p>
+        </div>
+        <div class="day-box">
+            <h4>Day 2: The Goal Guardrail [cite: 31]</h4>
+            <p>Ensure 10/10 clarity on the #1 priority for the week[cite: 32, 33].</p>
+        </div>
+        <div class="day-box">
+            <h4>Day 3: Radical Candor [cite: 36]</h4>
+            <p>Address misaligned behaviors immediately to close the "Gap"[cite: 37, 38].</p>
+        </div>
+        <div class="day-box">
+            <h4>Day 4: The Process Metronome [cite: 41]</h4>
+            <p>Praise the boring habits and "reps" that lead to the win[cite: 43, 45].</p>
+        </div>
+        <div class="day-box">
+            <h4>Day 5: Ownership Loop [cite: 46, 47]</h4>
+            <p>Identify the "single throat to choke" for every deliverable[cite: 48, 49].</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 The Leadership Sherpa. Dedicated to democratizing social fitness[cite: 17].</p>
+</footer>
+
 </body>
 </html>
