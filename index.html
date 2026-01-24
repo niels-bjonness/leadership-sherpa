@@ -1,11 +1,105 @@
-<section class="py-24 border-y border-cardborder bg-[#1c1c1c]">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sherpa Leadership | Leadership is a Muscle</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sitebg: '#181818', 
+                        cardbg: '#242424',
+                        cardborder: '#333333',
+                        primarywhite: '#f5f5f5',
+                        secondarygrey: '#b0b0b0', 
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #181818; 
+            color: #f5f5f5; 
+        }
+        .gradient-text { 
+            background: linear-gradient(45deg, #ffffff, #d4d4d4); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
+        .card { 
+            background-color: #242424; 
+            border: 1px solid #333333; 
+            transition: all 0.3s ease; 
+        }
+        .card:hover { 
+            border-color: #555555; 
+        }
+        .sherpa-cue { 
+            color: #d4d4d4; 
+            border-left: 2px solid #555555; 
+            padding-left: 1.25rem; 
+            margin-top: 1rem; 
+        }
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="antialiased leading-relaxed">
+
+    <nav class="p-6 flex justify-between items-center max-w-6xl mx-auto">
+        <div class="font-bold text-xl tracking-tighter uppercase text-primarywhite">Sherpa Leadership</div>
+        <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest text-secondarygrey">
+            <a href="#philosophy" class="hover:text-primarywhite transition">Philosophy</a>
+            <a href="#alignment" class="hover:text-primarywhite transition">Alignment</a>
+            <a href="#program" class="hover:text-primarywhite transition">The Ascent</a>
+        </div>
+    </nav>
+
+    <header class="max-w-6xl mx-auto px-6 py-24 md:py-32 text-center">
+        <h1 class="text-5xl md:text-8xl font-black mb-8 leading-tight tracking-tighter text-primarywhite">
+            Leadership is a <span class="gradient-text">Muscle</span>,<br>Not a Title.
+        </h1>
+        <p class="text-xl md:text-2xl text-secondarygrey max-w-3xl mx-auto mb-12 font-light leading-relaxed">
+            Most leadership development is broken because it treats leadership as a concept to be studied rather than a skill to be trained. <strong>It’s like reading a book about rock climbing but never touching a wall.</strong>
+        </p>
+        <div class="flex justify-center">
+            <a href="#program" class="bg-white text-[#181818] px-10 py-4 rounded-full font-bold uppercase tracking-widest hover:bg-neutral-200 transition">Start Your Ascent</a>
+        </div>
+    </header>
+
+    <section id="philosophy" class="max-w-6xl mx-auto px-6 py-24 border-t border-cardborder">
+        <h2 class="text-xs uppercase tracking-[0.4em] text-secondarygrey mb-16 text-center font-bold">The Methodology</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="card p-8 rounded-xl">
+                <h3 class="text-xl font-bold mb-4 text-primarywhite">Radical Clarity in Conflict</h3>
+                <p class="text-secondarygrey leading-relaxed">We don't avoid the "climb." I help you navigate interpersonal challenges by debating until the best solution is found. Friction is simply the grip you need to move higher.</p>
+            </div>
+            <div class="card p-8 rounded-xl">
+                <h3 class="text-xl font-bold mb-4 text-primarywhite">Applied Training</h3>
+                <p class="text-secondarygrey leading-relaxed">No lectures—only real-time gear checks. I provide specialized tools for high-stakes situations so that when the weather turns, your muscle memory takes over.</p>
+            </div>
+            <div class="card p-8 rounded-xl">
+                <h3 class="text-xl font-bold mb-4 text-primarywhite">The Daily Ascent</h3>
+                <p class="text-secondarygrey leading-relaxed">Consistency over intensity. I am your Sherpa, spotting you through daily micro-reps until your leadership muscle is strong enough for you to lead the climb yourself.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="alignment" class="py-24 border-y border-cardborder bg-[#1c1c1c]">
         <div class="max-w-6xl mx-auto px-6 text-center">
-            <h2 class="text-xs uppercase tracking-[0.4em] text-secondarygrey mb-8 font-bold">The Mission Check</h2>
+            <h2 class="text-xs uppercase tracking-[0.4em] text-secondarygrey mb-8 font-bold">Shared Reality</h2>
             <h3 class="text-4xl md:text-6xl font-black mb-10 text-primarywhite italic">The Four Points of Alignment</h3>
             <p class="text-xl text-secondarygrey mb-16 font-light leading-relaxed max-w-3xl mx-auto">
-                Alignment is a shared reality. To reach the summit, your team must be perfectly synced. You have succeeded when every member gives the exact same answer to these four questions:
+                Alignment is a shared map. To reach the summit, your team must be perfectly synced. You have succeeded when every member gives the exact same answer to these four questions:
             </p>
             
+            
+
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-16 text-left">
                 <div class="p-6 border border-cardborder rounded-xl bg-cardbg flex flex-col justify-between">
                     <div>
@@ -45,3 +139,110 @@
             </div>
         </div>
     </section>
+
+    <section id="program" class="max-w-6xl mx-auto px-6 py-24">
+        <div class="mb-16 text-center">
+            <h2 class="text-4xl font-black mb-4 text-primarywhite">7 Days of Alignment & Accountability</h2>
+            <p class="text-secondarygrey text-lg max-w-2xl mx-auto">A guided ascent through the Four Points. I spot you on every rep until you are ready to take the lead.</p>
+        </div>
+
+        <div class="space-y-6">
+            <div class="card p-8 rounded-xl grid md:grid-cols-4 gap-8 items-start">
+                <div class="text-secondarygrey font-bold tracking-widest uppercase text-xs pt-1">Day 1: The Anchor</div>
+                <div class="md:col-span-3">
+                    <h4 class="text-2xl font-bold mb-4 italic text-primarywhite">Point 1: Where are we going?</h4>
+                    <div class="sherpa-cue">
+                        <strong class="text-primarywhite block mb-1">The Sherpa's Cue:</strong> In every meeting today, anchor tactical tasks to the North Star. Ask: "How does this specific task get us to our destination?"
+                    </div>
+                    <div class="mt-6 text-sm text-secondarygrey">
+                        <strong>The Debrief:</strong> Did the anchor hold? If the team couldn't link their work to the "Where," we increase the weight tomorrow.
+                    </div>
+                </div>
+            </div>
+
+            <div class="card p-8 rounded-xl grid md:grid-cols-4 gap-8 items-start">
+                <div class="text-secondarygrey font-bold tracking-widest uppercase text-xs pt-1">Day 2: The Window</div>
+                <div class="md:col-span-3">
+                    <h4 class="text-2xl font-bold mb-4 italic text-primarywhite">Point 2: How long do we have?</h4>
+                    <div class="sherpa-cue">
+                        <strong class="text-primarywhite block mb-1">The Sherpa's Cue:</strong> Check the clock. Ask your team: "What is the hard deadline for our #1 priority?" If their answers differ, they are climbing at the wrong speed.
+                    </div>
+                    <div class="mt-6 text-sm text-secondarygrey">
+                        <strong>The Debrief:</strong> Consistency is safety. Did you find drift in the timeline?
+                    </div>
+                </div>
+            </div>
+
+            <div class="card p-8 rounded-xl grid md:grid-cols-4 gap-8 items-start">
+                <div class="text-secondarygrey font-bold tracking-widest uppercase text-xs pt-1">Day 3: The Gear</div>
+                <div class="md:col-span-3">
+                    <h4 class="text-2xl font-bold mb-4 italic text-primarywhite">Point 3: What do we need?</h4>
+                    <div class="sherpa-cue">
+                        <strong class="text-primarywhite block mb-1">The Sherpa's Cue:</strong> Perform a resource check. Ask: "Do you have the tools, time, or support required to finish this?" Don't accept 'I think so.'
+                    </div>
+                    <div class="mt-6 text-sm text-secondarygrey">
+                        <strong>The Debrief:</strong> Are you over-equipped or under-prepared? Clarity on resources is the difference between a summit and a rescue.
+                    </div>
+                </div>
+            </div>
+
+            <div class="card p-8 rounded-xl grid md:grid-cols-4 gap-8 items-start">
+                <div class="text-secondarygrey font-bold tracking-widest uppercase text-xs pt-1">Day 4: The Crevasse</div>
+                <div class="md:col-span-3">
+                    <h4 class="text-2xl font-bold mb-4 italic text-primarywhite">Point 4: What is stopping us?</h4>
+                    <div class="sherpa-cue">
+                        <strong class="text-primarywhite block mb-1">The Sherpa's Cue:</strong> Identify the hidden obstacles. Ask: "If we fail this week, what will be the reason?" Call out the friction points immediately.
+                    </div>
+                    <div class="mt-6 text-sm text-secondarygrey">
+                        <strong>The Debrief:</strong> Addressing the crevasse before you reach it is how you build trust and momentum.
+                    </div>
+                </div>
+            </div>
+
+            <div class="card p-8 rounded-xl grid md:grid-cols-4 gap-8 items-start">
+                <div class="text-secondarygrey font-bold tracking-widest uppercase text-xs pt-1">Day 5: The Safety Line</div>
+                <div class="md:col-span-3">
+                    <h4 class="text-2xl font-bold mb-4 italic text-primarywhite">The Ownership Loop</h4>
+                    <div class="sherpa-cue">
+                        <strong class="text-primarywhite block mb-1">The Sherpa's Cue:</strong> Ensure every deliverable has a single throat to choke. Shared responsibility is a frayed rope. Clarify who is holding whom.
+                    </div>
+                    <div class="mt-6 text-sm text-secondarygrey">
+                        <strong>The Debrief:</strong> Accountability feels like support when the four points are clear. Did your team feel held or helped?
+                    </div>
+                </div>
+            </div>
+
+            <div class="card p-8 rounded-xl grid md:grid-cols-4 gap-8 items-start">
+                <div class="text-secondarygrey font-bold tracking-widest uppercase text-xs pt-1">Day 6: Handing Over</div>
+                <div class="md:col-span-3">
+                    <h4 class="text-2xl font-bold mb-4 italic text-primarywhite">Teach to Lead</h4>
+                    <div class="sherpa-cue">
+                        <strong class="text-primarywhite block mb-1">The Sherpa's Cue:</strong> Today, you step back. Watch a junior leader drill the Four Points. Your job is to observe their form, not to do the work for them.
+                    </div>
+                    <div class="mt-6 text-sm text-secondarygrey">
+                        <strong>The Debrief:</strong> By stepping back, did you see the mountain more clearly? You are moving from climber to guide.
+                    </div>
+                </div>
+            </div>
+
+            <div class="card p-8 rounded-xl grid md:grid-cols-4 gap-8 items-start border-white/20">
+                <div class="text-primarywhite font-bold tracking-widest uppercase text-xs pt-1">Day 7: The Summit</div>
+                <div class="md:col-span-3">
+                    <h4 class="text-2xl font-bold mb-4 italic text-primarywhite">Confirm the Route</h4>
+                    <div class="sherpa-cue border-white/40">
+                        <strong class="text-primarywhite block mb-1">The Sherpa's Cue:</strong> Review the burn vs. velocity for the week. Prepare your alignment script for next week. You are no longer just training; you are leading.
+                    </div>
+                    <div class="mt-6 text-sm text-primarywhite font-bold">
+                        <strong>The Final Debrief:</strong> The muscle is built. The route is clear. Ready for the next ascent?
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="p-12 text-center text-secondarygrey text-xs uppercase tracking-[0.2em] border-t border-cardborder">
+        &copy; 2026 Sherpa Leadership. Leadership is a Muscle.
+    </footer>
+
+</body>
+</html>
